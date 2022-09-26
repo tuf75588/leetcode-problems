@@ -16,4 +16,3 @@ function twoSum(nums, target) {
     
 }
 
-const a = twoSum([3,2,3], 6);
