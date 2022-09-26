@@ -1,10 +1,19 @@
 function twoSum(nums, target) {
-  const length = nums.length;
-  for (const [index, val] of nums.entries()) {
-    const val = nums[index + 1] + nums[index];
+  let result = [];
+  for (let i = 0; i < nums.length; i++) {
+    let test = 0;
+    for (let j = 0; j < nums.length; j++) {
+      if (i === j) {
+        continue ;
+      }
+      test = nums[i] + nums[j];
+      if (test === target) {
+        result.push([i, j]);
+      }
+    }  
   }
-  return 0;
+  return result[0];
+    
 }
 
-const a = twoSum([2, 7, 5, 11], 9);
-a;
+const a = twoSum([3,2,3], 6);
